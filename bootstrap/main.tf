@@ -1,6 +1,6 @@
 # s3 bucket 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "aryaan-tfstate-threat-composer-683803166135-eu-west-2-an"
+  bucket = var.s3_bucket
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
