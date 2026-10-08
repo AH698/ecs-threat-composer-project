@@ -132,18 +132,18 @@ variable "ecs_assign_public_ip" {
 
 variable "log_group_name" {
   description = "name of the log group"
-  type = string
-  default = "threat-composer"
+  type        = string
+  default     = "threat-composer"
 }
 
 variable "log_retention_days" {
   description = "log retention in days"
-  type = number
-  default = 7
+  type        = number
+  default     = 7
 }
 
 variable "log_stream_prefix" {
   description = "start of the name of each log"
-  type = string
-  default = "ecs"
+  type        = string
+  default     = "ecs"
 }
