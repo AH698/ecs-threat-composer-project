@@ -48,14 +48,24 @@ in GitHub.
 
 ## Tech Stack
 
-- AWS: ECS Fargate, ALB, ECR, ACM, Route 53, VPC, CloudWatch, S3, IAM
-- Terraform
-- GitHub Actions
-- Docker
-- nginx
-- Trivy
-- Hadolint
-- TFLint
+![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white)
+![ECS Fargate](https://img.shields.io/badge/ECS_Fargate-232F3E)
+![ALB](https://img.shields.io/badge/ALB-232F3E)
+![ECR](https://img.shields.io/badge/ECR-232F3E)
+![ACM](https://img.shields.io/badge/ACM-232F3E)
+![Route 53](https://img.shields.io/badge/Route_53-232F3E)
+![VPC](https://img.shields.io/badge/VPC-232F3E)
+![CloudWatch](https://img.shields.io/badge/CloudWatch-232F3E)
+![S3](https://img.shields.io/badge/S3-232F3E)
+![IAM](https://img.shields.io/badge/IAM-232F3E)
+
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?logo=terraform&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![nginx](https://img.shields.io/badge/nginx-009639?logo=nginx&logoColor=white)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA)
+![Hadolint](https://img.shields.io/badge/Hadolint-374151)
+![TFLint](https://img.shields.io/badge/TFLint-374151)
 
 ## Local Setup
 
