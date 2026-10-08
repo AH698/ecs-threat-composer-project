@@ -1,16 +1,20 @@
 output "alb_dns" {
-  value = aws_lb.alb.dns_name
+  description = "alb dns, used in route53"
+  value       = aws_lb.alb.dns_name
 }
 
 output "alb_zone_id" {
-  value = aws_lb.alb.zone_id
+  description = "alb zone id, used in route53"
+  value       = aws_lb.alb.zone_id
 }
 
 output "alb_tg_arn" {
-  value = aws_lb_target_group.ip-tg.arn
+  description = "alb target group arn, used in ecs"
+  value       = aws_lb_target_group.ip-tg.arn
 }
 
 output "alb_sg_id" {
-  value = aws_security_group.sg_alb.id
+  description = "alb security gorup id, used in ecs"
+  value       = aws_security_group.sg_alb.id
 }
 
