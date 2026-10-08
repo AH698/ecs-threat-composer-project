@@ -17,7 +17,7 @@ in GitHub.
 ![Architecture diagram](images/architecture-diagram.png)
 
 ## Repository structure 
-```text
+```
 .
 ├── .github
 │   └── workflows
@@ -25,6 +25,12 @@ in GitHub.
 │       ├── image.yml
 │       └── infra.yml
 ├── app/
+├── bootstrap
+│   ├── .terraform.lock.hcl
+│   ├── main.tf
+│   ├── provider.tf
+│   ├── terraform.tfvars
+│   └── variables.tf
 ├── images/
 ├── infra
 │   ├── modules
@@ -41,6 +47,7 @@ in GitHub.
 │   └── variables.tf
 ├── .dockerignore
 ├── .gitignore
+├── .pre-commit-config.yaml
 ├── .trivyignore
 ├── Dockerfile
 └── README.md
