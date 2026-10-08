@@ -44,6 +44,13 @@ resource "aws_security_group" "ecs_sg" {
   }
 }
 
+resource "aws_cloudwatch_log_group" "ecs" {
+  name              = var.log_group_name
+  retention_in_days = var.log_retention_days
+}
+
+data "aws_region" "current" {}
+
 resource "aws_ecs_task_definition" "ecs_task_def" {
   family                   = var.ecs_family
   requires_compatibilities = ["FARGATE"]
@@ -51,6 +58,7 @@ resource "aws_ecs_task_definition" "ecs_task_def" {
   cpu                      = var.ecs_task_def_cpu
   memory                   = var.ecs_task_def_memory
   execution_role_arn       = aws_iam_role.ecs_task_execution_iam.arn
+
   container_definitions = jsonencode([
     {
       name      = var.container_name
@@ -61,8 +69,17 @@ resource "aws_ecs_task_definition" "ecs_task_def" {
           containerPort = var.container_port
         }
       ]
+      logConfiguration = {
+        logDriver = "awslogs"
+        options = {
+          "awslogs-group"         = aws_cloudwatch_log_group.ecs.name
+          "awslogs-region"        = data.aws_region.current.region
+          "awslogs-stream-prefix" = var.log_stream_prefix
+        }
+      }
     }
   ])
+
   runtime_platform {
     operating_system_family = var.operating_system_family
     cpu_architecture        = var.cpu_architecture

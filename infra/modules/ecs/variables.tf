@@ -119,12 +119,31 @@ variable "alb_tg" {
 }
 
 variable "priv_subnets_id" {
-  description = "ids of the public subnets the tasks run in"
+  description = "ids of the priv subnets the tasks run in"
   type        = list(string)
 }
+
 
 variable "ecs_assign_public_ip" {
   description = "auto assign public ip for ecs"
   type        = bool
   default     = false
+}
+
+variable "log_group_name" {
+  description = "name of the log group"
+  type = string
+  default = "threat-composer"
+}
+
+variable "log_retention_days" {
+  description = "log retention in days"
+  type = number
+  default = 7
+}
+
+variable "log_stream_prefix" {
+  description = "start of the name of each log"
+  type = string
+  default = "ecs"
 }
