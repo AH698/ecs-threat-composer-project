@@ -33,4 +33,4 @@ cpu_architecture       = "X86_64"
 type = "A"
 
 # image tag
-image_tag = "07e804c"
+image_tag = "de74c6a8b6ba5dd9f41e690406f40918689ec079"
