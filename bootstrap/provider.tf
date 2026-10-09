@@ -6,7 +6,16 @@ terraform {
       version = "~> 6.0"
     }
   }
+
+  backend "s3" {
+    bucket       = "threat-composer-bootstrap"
+    key          = "bootstrap/terraform.tfstate"
+    region       = "eu-west-2"
+    encrypt      = true
+    use_lockfile = true
+  }
 }
+
 
 provider "aws" {
   region = "eu-west-2"
