@@ -8,6 +8,9 @@ RUN yarn build
 
 # runtime
 FROM nginxinc/nginx-unprivileged:stable-alpine
+USER root
+RUN apk add --no-cache tiff=4.7.2-r0
+USER nginx
 WORKDIR /app
 COPY --from=builder app/build /usr/share/nginx/html/
 EXPOSE 8080
