@@ -8,7 +8,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket       = "tfstate-threat-composer-an"
+    bucket       = "tfstate-threat-composer"
     key          = "threat-composer/terraform.tfstate"
     region       = "eu-west-2"
     encrypt      = true
